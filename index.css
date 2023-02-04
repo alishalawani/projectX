@@ -1,0 +1,183 @@
+body {
+    width: 100vw;
+    padding: 20px;
+    height: 100vh;
+    background-color: #0B0B60;
+    font-family: 'Press Start 2P', cursive;
+    color: rgb(129, 156, 230);
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
+    max-width: 100vw;
+    padding: 15% 0 0 0;
+    text-align: center;
+    animation: slideIn .5s ease-in-out forwards;
+}
+
+#hide {
+    display: none;
+}
+
+.start-btn{
+    border-color: rgb(214, 218, 229);
+    outline: none;
+    border-width: 4px;
+    border-style: outset;
+    padding: 10px;
+    width: 200px;
+    height: 50px;
+    margin: 20px auto 0 auto;
+        font-family: 'Press Start 2P', cursive;
+    color: #0B0B60;
+    cursor: pointer;
+}
+.welcome {
+    color: rgb(253, 252, 252);
+}
+.hey-player{
+}
+.chooseAvatar {
+text-align: center;
+}
+.avatar-container{
+    margin-top: 50px;
+}
+
+#avatar{
+    width: 150px;
+    margin-right:20px ;
+    cursor: pointer;
+    border-radius: 50%;
+}
+#avatar:hover, #avatar:active{
+    border-style: outset;
+    border-width: 4px;
+    border-color: rgb(186, 201, 245);
+}
+.add-bgd{
+    background-color:rgb(135, 148, 184);;
+}
+
+.begin-text {
+    margin-top: 50px;
+    display: none;
+}
+.slide-text {
+    animation: slideUp .5s ease-in-out forwards;
+    display: inline-block;
+}
+
+
+#profile-img {
+    width: 100px;
+    border-radius: 50%;
+    border-style: outset;
+    border-width: 4px;
+    border-color: rgb(186, 201, 245);
+        background-color: rgb(135, 148, 184);
+            ;
+}
+.flip-card {
+    background-color: transparent;
+    width: 350px;
+    height: 300px;
+    perspective: 1000px;
+    margin: 0 auto;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+     /* color: #0B0B60; */
+    color: #8c0583;
+    background-color: rgb(129, 156, 230);
+    border: #0B0B60;
+    border-style: dotted;
+    border-width: 4px;
+}
+#question, #answer{
+    margin: 35% 0;
+}
+.flip-card-front {
+    color: #8c0583;
+    background-color: rgb(129, 156, 230);
+}
+
+.flip-card-back {
+    background-color: #20c7a3;
+    color: white;
+    transform: rotateY(180deg);
+    box-shadow:0 0 50px 10px #20c7a3;
+}
+
+.btns-container {
+display: flex;
+justify-content: space-between;
+width: 600px;
+margin: 30px auto;
+text-align: center;
+}
+.btns-container span {
+    margin-top: 30px;
+}
+.prev-btn, .next-btn {
+ height: 100px;
+ width: 100px;
+ cursor: pointer;
+}
+.prev-btn{
+    opacity: 0.4;
+-webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+
+}
+
+.last-container{
+    width: 70%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(500px) scale(.2);
+    }
+
+    100% {
+        transform: translateX(0px) scale(1);
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(300px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
