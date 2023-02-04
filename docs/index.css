@@ -5,6 +5,7 @@ body {
     background-color: #0B0B60;
     font-family: 'Press Start 2P', cursive;
     color: rgb(129, 156, 230);
+    user-select: none
 }
 .container {
     display: flex;
