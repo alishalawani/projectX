@@ -21,7 +21,10 @@ const questions = [
 	},
 ];
 console.log(window.location.href);
-if (window.location.href[window.location.href.length - 1] == '/') {
+if (
+	window.location.href[window.location.href.length - 1] == '/' ||
+	window.location.href.includes('index')
+) {
 	document.querySelector('.start-btn').addEventListener('click', onStart);
 }
 function onStart() {
